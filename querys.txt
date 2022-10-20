@@ -1,0 +1,23 @@
+mutation createProduct {
+  createProduct(data: {title: "Dead By Dealight", description: "Horror survivor game", url: "https://cdn1.epicgames.com/offer/611482b8586142cda48a0786eb8a127c/EGS_DeadbyDaylight_BehaviourInteractive_S1_2560x1440-a32581cf9948a9a2e24b2ff15c1577c7", price: 100, stock: 50}) {
+    id title description code stock timestamp  url
+  }
+}
+
+query getProduct {
+  getProduct(id: "98a640bb4e09f4d98b85"){
+    id title description code stock timestamp url
+  }
+}
+
+mutation updateProduct {
+  updateProduct(id: "98a640bb4e09f4d98b85", data: {title: "Dead By Dealight", description: "Horror survivor game", url: "https://cdn1.epicgames.com/offer/611482b8586142cda48a0786eb8a127c/EGS_DeadbyDaylight_BehaviourInteractive_S1_2560x1440-a32581cf9948a9a2e24b2ff15c1577c7", price: 100, stock: 20} ) {
+    id title description code stock timestamp url
+  }
+}
+
+mutation deleteProduct {
+  deleteProduct(id: "98a640bb4e09f4d98b85") {
+    id title
+  } 
+}
